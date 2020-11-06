@@ -1,5 +1,5 @@
 body {
-  max-width: 1366px;
+  width: 100%;
   height: auto;
 }
 header {
@@ -8,7 +8,7 @@ header {
   padding-left: 10px;
   padding-bottom: 0;
   /* border-bottom: 8px solid white; */
-  z-index: 1;
+  z-index: 2;
 }
 header img {
   width: 101.68px;
@@ -16,7 +16,7 @@ header img {
   margin-top: 10px;
 }
 .container {
-  display: flexbox;
+  display: block;
   justify-content: center;
   align-items: center;
   margin: 0px;
@@ -24,7 +24,10 @@ header img {
 .home {
   width: 100%;
   height: 680px;
-  display: grid;
+  display: block;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   /* grid-template-columns: 2;
   grid-template-rows: 1; */
   margin: 0px;
@@ -55,13 +58,13 @@ header img {
 }
 .containerImage {
   position: relative;
-  top: -300px;
-  left: 624px;
-  width: 500px;
+  top: -320px;
+  left: 600px;
+  width: 700px;
   height: auto;
 }
 .container img {
-  width: 700px;
+  width: 100%;
   height: auto;
   z-index: 2;
 }
@@ -72,13 +75,14 @@ header img {
 }
 input {
   position: relative;
-  top: 40px;
+  /*top: 40px;*/
   width: 157px;
   height: 40px;
   border-radius: 25px;
   border: 1px solid white;
-  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Poppins', sans-serif;
   font-size: 9.36px;
+  z-index: 2;
 }
 .buttonHeader {
   background-color: #f9d7d6;
@@ -127,6 +131,7 @@ input {
   font-weight: lighter;
 }
 .check h3 {
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   color: #ff3566;
 }
@@ -135,7 +140,8 @@ input {
   height: 65px;
 }
 .check p {
-  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
   color: #808fa3;
 }
 .cash {
@@ -147,6 +153,7 @@ input {
   text-align: center;
 }
 .cash h3 {
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   color: #ff3566;
 }
@@ -155,7 +162,8 @@ input {
   height: 65px;
 }
 .cash p {
-  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
   color: #808fa3;
 }
 .hands {
@@ -167,6 +175,7 @@ input {
   text-align: center;
 }
 .hands h3 {
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   color: #ff3566;
 }
@@ -175,7 +184,8 @@ input {
   height: 65px;
 }
 .hands p {
-  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
   color: #808fa3;
 }
 .buttonInfo {
@@ -199,7 +209,7 @@ input {
 }
 .users img {
   width: 100%;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 
   /* height: 591px; */
 }
@@ -362,9 +372,223 @@ input {
 .containerImage6 {
   width: 100%;
   position: relative;
-  top: -350px;
-  left: 288px;
+  top: -432px;
+  left: 120px;
 }
 .containerImage6 img {
-  width: 731.74px;
+  width: 900px;
+}
+.faqs {
+  display: block;
+}
+.faqs h2 {
+  position: relative;
+  left: 600px;
+  top: 380px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #808fa3;
+}
+
+.faqsGrid {
+  position: relative;
+  top: 400px;
+  display: grid;
+  grid-template-areas:
+    'h2             h2           h2'
+    'faqsInfo1  faqsInfo2 faqsInfo3';
+
+  justify-items: center;
+  align-items: center;
+  align-content: space-between;
+  padding-top: 100px;
+  padding-left: 150px;
+}
+.faqsInfo1 {
+  width: 192px;
+  height: 200px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.faqsInfo1 h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.07px;
+  color: #ff3566;
+}
+.faqsInfo1 p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.44px;
+  color: #25344b;
+}
+.faqsInfo2 {
+  width: 192px;
+  height: 200px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.faqsInfo2 h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.07px;
+  color: #ff3566;
+}
+.faqsInfo2 p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.44px;
+  color: #25344b;
+}
+.faqsInfo3 {
+  width: 192px;
+  height: 200px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.faqsInfo3 h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.07px;
+  color: #ff3566;
+}
+.faqsInfo3 p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.44px;
+  color: #25344b;
+}
+.buttonFaqs {
+  position: relative;
+  left: -360px;
+  top: 100px;
+  background-color: #ff3566;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 11.5px;
+}
+.extraInfo {
+  position: relative;
+  left: 200px;
+  top: 600px;
+  display: block;
+  width: 1045.44px;
+  height: 578.33px;
+}
+.containerImage7 {
+  position: relative;
+  left: -200px;
+  top: -200px;
+  display: block;
+  justify-items: center;
+  align-items: center;
+  width: 100vw;
+}
+.extraInfo img {
+  margin-left: 0;
+  width: 100vw;
+  height: auto;
+}
+.extraInfoText {
+  position: relative;
+  left: -50px;
+  top: 280px;
+  z-index: 2;
+}
+.extraInfoText h3 {
+  width: 250px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 21.78px;
+  color: #ff3566;
+  background-color: white;
+}
+.extraInfoText p {
+  width: 320px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.79px;
+  color: white;
+}
+.extraInfoText a {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+footer {
+  border: grey solid 1px;
+  display: block;
+  text-align: center;
+  align-items: center;
+  background-color: #213146;
+  width: 100vw;
+  height: 100px;
+  position: relative;
+  padding-top: 50px;
+  top: 710px;
+  padding-bottom: 50px;
+}
+footer img {
+  width: 101.68px;
+  height: 32.7px;
+}
+
+/* estilos para html de vendedores */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  /* font-family: sans-serif; */
+}
+.formulario {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.formulario__titulo {
+  text-align: center;
+  margin-top: 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+.formulario__input,
+.formulario__label,
+.formulario__submit {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+}
+.formulario__input {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+.formulario__input:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.7);
+}
+.formulario__input:focus + .formulario__label {
+  margin-top: -135px;
+}
+.formulario__label {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 15px;
+  padding-left: 15px;
+  position: absolute;
+  margin-top: -85px;
+  z-index: -20;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+.formulario__submit {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
+.fijar {
+  margin-top: -135px;
 }
