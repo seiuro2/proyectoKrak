@@ -11,31 +11,65 @@
       <img src="assets/images/krakLogo.png" alt="" />
       <input class="buttonHeader" type="button" value="Iniciar sesión" />
     </header>
-    <div class="container">
+    <div class="containerVendor">
       <h1>REGISTRAR COMO VENDEDOR</h1>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
         debitis ab corporis aperiam ea.
       </p>
-      <form action="" class="formulario">
-        <h1 class="formulario__titulo">Contáctenos</h1>
-        <input type="text" class="formulario__input" />
-        <label for="" class="formulario__label">Nombre completo</label>
-        <input type="text" class="formulario__input" />
-        <label for="" class="formulario__label">E-mail</label>
-        <input type="text" class="formulario__input" />
-        <label for="" class="formulario__label">Cedula de identidad</label>
-        <input type="text" class="formulario__input" />
-        <label for="" class="formulario__label">Teléfono</label>
-        <input type="text" class="formulario__input" />
-        <label for="" class="formulario__label">Nombre completo</label>
-        <input type="text" class="formulario__input" />
-        <label for="" class="formulario__label">E-mail</label>
-        <input type="text" class="formulario__input" />
-        <label for="" class="formulario__label">Fecha de nacimiento</label>
-        <input type="text" class="formulario__input" />
-        <label for="" class="formulario__label">Ciudad</label>
-      </form>
+      <div class="formContainer">
+        <form
+          action="assets/js/logica.js"
+          class="formulario"
+          name="formulario"
+          method="post"
+        >
+          <h2>Subir imagen de perfil (100 X 100px)</h2>
+          <div class="formItemImageContainer">
+            <input
+              class="formItemImage"
+              type="file"
+              name="archivo"
+              value="image/*"
+            />
+          </div>
+          <input
+            class="formItem"
+            type="text"
+            placeholder="Nombre completo"
+            id="fullName"
+          />
+          <input
+            class="formItem"
+            type="email"
+            placeholder="E-mail"
+            id="email"
+          />
+          <input
+            id="cI"
+            class="formItem"
+            type="text"
+            placeholder="Cédula  de identidad"
+          />
+          <input class="formItem" type="text" placeholder="Teléfono" id="tlf" />
+          <input
+            id="birthday"
+            class="formItem"
+            type="date"
+            placeholder="Fecha de nacimiento"
+            style="color: #5c5a5a"
+          />
+          <input class="formItem" type="text" placeholder="Ciudad" id="city" />
+          <input
+            class="formItem"
+            type="text"
+            placeholder="Departamento"
+            id="dep"
+          />
+          <button class="singIn" type="submit">Iniciar sesión</button>
+        </form>
+      </div>
     </div>
+    <script src="assets/js/logica.js"></script>
   </body>
 </html>
