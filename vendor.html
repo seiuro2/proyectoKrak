@@ -13,18 +13,12 @@
     </header>
     <div class="containerVendor">
       <h1>REGISTRAR COMO VENDEDOR</h1>
-      <p>
+      <p class="parrafo__vendedor">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
         debitis ab corporis aperiam ea.
       </p>
       <div class="formContainer">
-        <form
-          action="assets/js/logica.js"
-          class="formulario"
-          name="formulario"
-          method="post"
-        >
-          <h2>Subir imagen de perfil (100 X 100px)</h2>
+        <form action="" class="formulario" id="formulario">
           <div class="formItemImageContainer">
             <input
               class="formItemImage"
@@ -32,44 +26,140 @@
               name="archivo"
               value="image/*"
             />
+            <h2 class="imageH2">Subir imagen de perfil (100 X 100px)</h2>
           </div>
-          <input
-            class="formItem"
-            type="text"
-            placeholder="Nombre completo"
-            id="fullName"
-          />
-          <input
-            class="formItem"
-            type="email"
-            placeholder="E-mail"
-            id="email"
-          />
-          <input
-            id="cI"
-            class="formItem"
-            type="text"
-            placeholder="Cédula  de identidad"
-          />
-          <input class="formItem" type="text" placeholder="Teléfono" id="tlf" />
-          <input
-            id="birthday"
-            class="formItem"
-            type="date"
-            placeholder="Fecha de nacimiento"
-            style="color: #5c5a5a"
-          />
-          <input class="formItem" type="text" placeholder="Ciudad" id="city" />
-          <input
-            class="formItem"
-            type="text"
-            placeholder="Departamento"
-            id="dep"
-          />
-          <button class="singIn" type="submit">Iniciar sesión</button>
+          <!-- Grupo Nombre -->
+          <div class="formulario__grupo fullName" id="grupo__nombre">
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="nombre"
+                id="nombre"
+                placeholder="Nombre completo"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              El nombre tiene solo acepta lestras, sin números ni caracteres
+              especiales.
+            </p>
+          </div>
+
+          <!-- grupo email -->
+          <div class="formulario__grupo email" id="grupo__email">
+            <div class="formulario__grupo-input">
+              <input
+                type="email"
+                class="formulario__input"
+                name="email"
+                id="correo"
+                placeholder="Correo Electronico"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Coloque un correo valido</p>
+          </div>
+
+          <!-- grupo cedula -->
+          <div class="formulario__grupo cI" id="grupo__ci">
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="ci"
+                id="ci"
+                placeholder="Cédula de identidad"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              Este campo solo acepta números y debe esta compuesto de 6 a 8
+              digitos.
+            </p>
+          </div>
+
+          <!-- grupo telefono  -->
+          <div class="formulario__grupo tlf" id="grupo__telefono">
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="telefono"
+                id="telefono"
+                placeholder="Número telefónico"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              Este campo debe contener 14 digitos.
+            </p>
+          </div>
+
+          <!-- grupo fecha de nacimiento -->
+          <div class="formulario__grupo birthday" id="grupo__birthday">
+            <div class="formulario__grupo-input">
+              <input
+                type="date"
+                class="formulario__input"
+                name="birthday"
+                id="birthday"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              Por favor escoja su fecha de nacimiento.
+            </p>
+          </div>
+
+          <!-- grupo ciudad -->
+          <div class="formulario__grupo city" id="grupo__ciudad">
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="ciudad"
+                id="ciudad"
+                placeholder="Ciudad"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ciudad de habitación.</p>
+          </div>
+
+          <!-- grupo departamento -->
+          <div class="formulario__grupo dep" id="grupo__departamento">
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="departamento"
+                id="departamento"
+                placeholder="Departamento"
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              coloque el departamento donde esta ubicado.
+            </p>
+          </div>
+
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p>
+              <i class="fas fa-exclamation-triangle"></i><b> Error:</b> Por
+              favor rellene el formulario correctamente.
+            </p>
+          </div>
+          <div class="formulario__grupo formulario__grupo-btn-enviar btnSend">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+              El formulario se envió exitosamente!
+            </p>
+          </div>
         </form>
       </div>
     </div>
     <script src="assets/js/logica.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
   </body>
 </html>
