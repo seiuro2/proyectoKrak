@@ -1,80 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/adminEstilos.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
-      <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="assets/css/estilosCarrousel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
     <title>Admin Home</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-   <li class="categories_list">Nombre Admin
-    <ul class="desplegable">
-      <li class="itemList">Jose Garcia</li>
-      <li class="itemList">Daniel Perez</li>
-      <li class="itemList">Alejandra Perez</li>
-    </ul>
-  </li>
-</ul>
-<div>
-  <p>ADMINISTRADOR DIOS</p>
-</div>
-<input class="searchBtn" type="button" value="buscar">
-      </div>
-      <div class="navBar">
-      <div class="navBar_item-imageContainer">
-        <img src="assets/images/LogotipoBlanco.png" alt="">
-      </div>
-      <div class="navBar_item-assets">
-        <a ><img src="assets/images/home_icon.png" alt=""></a>
-<a><img src="assets/images/empresa-icon.png" alt=""> </a>
-<a><img src="assets/images/pagos_icon.png" alt=""></a>
-      </div>
-      <div class="navBar_item-assets">
-        <a href="">
-          <img src="assets/images/email_icon.png" alt="">
-        </a>
-        <a href=""> <img src="assets/images/settings_icon.png" alt=""></a>
-      </div>
-      </div>
-      <div class="admin_info">
-        <div class="admin_info-stats">
-          <div class="admin_info-stats-vcnp">
-            <input type="date" class="admin_info-date" value="">
+</head>
 
-            <div class="admin_info-stats-ventas">
-              <h2>ventas</h2>
-              <p>+23%</p>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav class="categories_list">Nombre Admin
+                <ul class="desplegable submenu">
+                    <li class="itemList">Jose Garcia</li>
+                    <li class="itemList">Daniel Perez</li>
+                    <li class="itemList">Alejandra Perez</li>
+                </ul>
+            </nav>
+            </ul>
+            <div>
+                <p>ADMINISTRADOR DIOS</p>
             </div>
-            <div class="admin_info-stats-comisiones">
-              <h2>Comisiones</h2>
-              <p>+26%</p>
-            </div>
-            <div class="admin_info-stats-nuevaEmpresa">
-              <h2>Empresas nuevas</h2>
-              <p>02</p>
-            </div>
-            <div class="admin_info-stats-pagosPendientes">
-              <h2>Pagos pendientes</h2>
-              <p>04</p>
-            </div>
-          </div>
-            <div class="admin_info-grafico">
-            
-          </div>
+            <input class="searchBtn" type="button" value="buscar">
         </div>
-        <div class="admin_info-summary">
-          <div class="admin_info-summary_item">
+        <div class="navBar">
+            <div class="navBar_item-imageContainer">
+                <img src="assets/images/LogotipoBlanco.png" alt="">
+            </div>
+            <div class="navBar_item-assets">
+                <a href=""><img src="assets/images/home_icon.png" alt=""></a>
+                <a href=""><img src="assets/images/empresa-icon.png" alt=""> </a>
+                <a href=""><img src="assets/images/pagos_icon.png" alt=""></a>
+            </div>
+            <div class="navBar_item-assets">
+                <a href="">
+                    <img src="assets/images/email_icon.png" alt="">
+                </a>
+                <a href=""> <img src="assets/images/settings_icon.png" alt=""></a>
+            </div>
+        </div>
+        <div class="admin_info">
+            <div class="admin_info-stats">
+                <div class="admin_info-stats-vcnp">
+                    <div class="admin_info-date" id="fecha">
+                        <div id="months" class="months">mes</div>
+                        <div id="dia" class="dia">dia</div>
+                        <div id="year" class="year">año</div>
+                    </div>
+                    <div class="admin_info-stats-ventas">
+                        <h2>ventas</h2>
+                        <p>+23%</p>
+                    </div>
+                    <div class="admin_info-stats-comisiones">
+                        <h2>Comisiones</h2>
+                        <p>+26%</p>
+                    </div>
+                    <div class="admin_info-stats-nuevaEmpresa">
+                        <h2>Empresas nuevas</h2>
+                        <p>02</p>
+                    </div>
+                    <div class="admin_info-stats-pagosPendientes">
+                        <h2>Pagos pendientes</h2>
+                        <p>04</p>
+                    </div>
+                </div>
+                <div class="admin_info-grafico">
+                    <div class="grafico">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="admin_info-summary">
+                <div>
+                    <h2>RESUMEN</h2>
+                </div>
+                <div class="carousel">
+                    <div class="carousel__contenedor">
+                        <button aria-label="Anterior" class="carousel__anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+                        <div class="carousel__lista">
+                            <div class="carousel__elemento">
+                                <div class="admin_info-summary_item">
+                                    <div class="sImg">
+                                        <img src="assets/images/cashBag.png" alt="">
+                                    </div>
+                                    <p>Ventas totales</p>
+                                    <div class="summary_item-numbers">
+                                        <p>$12.453.055</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="admin_info-summary_item">
+                                    <div class="sImg">
+                                        <img src="assets/images/kitem.png" alt="" />
+                                    </div>
+                                    <p>Comisiones Krak</p>
+                                    <div class="summary_item-numbers">
+                                        <p>$1.400.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="admin_info-summary_item">
+                                    <div class="sImg">
+                                        <img src="assets/images/grafic.png" alt="">
+                                    </div>
+                                    <p>Numero de ventas totales</p>
+                                    <div class="summary_item-numbers">
+                                        <p>1235</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="admin_info-summary_item">
+                                    <div class="sImg">
+                                        <img src="assets/images/people.png" alt="" />
+                                    </div>
+                                    <p>Promociones vendidas</p>
+                                    <div class="summary_item-numbers">
+                                        <p>102</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel__elemento">
+                                <div class="admin_info-summary_item">
+                                    <div class="sImg">
+                                        <img src="assets/images/cashBag.png" alt="">
+                                    </div>
+                                    <p>Comisiones de vendedores</p>
+                                    <div class="summary_item-numbers">
+                                        <p>21.235</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="admin_info-summary_item">
+                                    <div class="sImg">
+                                        <img src="assets/images/people.png" alt="" />
+                                    </div>
+                                    <p>Numero de clientes</p>
+                                    <div class="summary_item-numbers">
+                                        <p>230</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="admin_info-summary_item">
+                                    <div class="sImg">
+                                        <img src="assets/images/people.png" alt="" />
+                                    </div>
+                                    <p>Nuevos clientes</p>
+                                    <div class="summary_item-numbers">
+                                        <p>45</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="admin_info-summary_item">
+                                    <div class="sImg">
+                                        <img src="assets/images/people.png" alt="" />
+                                    </div>
+                                    <p>Clientes activados</p>
+                                    <div class="summary_item-numbers">
+                                        <p>180</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button aria-label="Siguiente" class="carousel__siguiente">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+                    </div>
+
+                    <div role="tablist" class="carousel__indicadores"></div>
+                </div>
+                <!-- <div class="admin_info-summary_item">
             <img src="assets/images/cashBag.png" alt="">
             <p>Ventas totales</p>
             <div class="summary_item-numbers">
-            <p>$12.453.055</p>
+            
             </div>
          </div>
          <div class="admin_info-summary_item">
@@ -104,10 +219,15 @@
             <div class="summary_item-numbers">
             <p>230</p>
             </div>
-         </div>
+         </div> -->
+            </div>
+
         </div>
-        
-        </div>
-      </div>
-  </body>
+    </div>
+    <script src="assets/js/adminLogica.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src='assets/js/app.js'></script>
+</body>
+
 </html>

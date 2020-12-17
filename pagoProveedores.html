@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/adminEstilos.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css" />
+    <title>Payment Providers</title>
+</head>
+
+<body>
+
+    <div class="container1  ">
+        <div class="header">
+            <div class="dropdown dropDown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+    Usuarios    
+  </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item " href="#">Jose Garcia</a></li>
+                    <li><a class="dropdown-item" href="#">Alejandra Perez</a></li>
+                    <li><a class="dropdown-item" href="#">Daniel Perez</a></li>
+
+
+                </ul>
+            </div>
+            </ul>
+            <div>
+                <p>ADMINISTRADOR DIOS</p>
+            </div>
+            <input class="searchBtn btn btn-secondary " type="button" value="Buscar Compañia">
+        </div>
+        <div class="navBar">
+            <div class="navBar_item-imageContainer">
+                <img src="assets/images/LogotipoBlanco.png" alt="">
+            </div>
+            <div class="navBar_item-assets">
+                <a href="./webAdmin.html"><img src="assets/images/home_icon.png" alt=""></a>
+                <a href=""><img src="assets/images/empresa-icon.png" alt=""> </a>
+                <a href="./pagoProveedores.html"><img src="assets/images/pagos_icon.png" alt=""></a>
+            </div>
+            <div class="navBar_item-assets">
+                <a href="">
+                    <img src="assets/images/email_icon.png" alt="">
+                </a>
+                <a href=""> <img src="assets/images/settings_icon.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="payment_info container">
+
+            <div class="payment_info_box1 ">
+
+                <div class="company">
+
+                    <div class="company-text ">
+                        <h2>PAGOS</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores quis odio fugit in eosS.</p>
+                    </div>
+                </div>
+                <table class="table headTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Pago proveedores</th>
+                            <th scope="col">Pago vendedores</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active">
+                            <p>Pago proveedores</p>
+                        </li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">Pago vendedores</li>
+
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="table-containter-1 ms-5 m-5">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"> </th>
+                                            <th scope="col">Nombre compañia</th>
+                                            <th scope="col">Pago pendiente</th>
+                                            <th scope="col "><input type="checkbox"> Selecionar Todo</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                            <td>Compañia1</td>
+                                            <td>$2.000.000</td>
+
+                                            <th scope="col "><input type="checkbox"> </th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                            <td>Compañia2</td>
+                                            <td>$6.000.000</td>
+                                            <th scope="col "><input type="checkbox"></th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                            <td>Compañia3</td>
+                                            <td>$10.000.000</td>
+
+                                            <th scope="col "><input type="checkbox"> </th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                            <td>Compañia4</td>
+                                            <td>$2.000.000</td>
+
+                                            <th scope="col "><input type="checkbox"> </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="table-containter-1 ms-5 m-5">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"> </th>
+                                            <th scope="col">Nombre compañia</th>
+                                            <th scope="col">Pago pendiente</th>
+                                            <th scope="col "><input type="checkbox"> Selecionar Todo</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                            <td>Vendedor1</td>
+                                            <td>$1.000.000</td>
+
+                                            <th scope="col "><input type="checkbox"> </th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                            <td>Vendedor2</td>
+                                            <td>$1.200.000</td>
+                                            <th scope="col "><input type="checkbox"></th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                            <td>Vendedor3</td>
+                                            <td>$500.000</td>
+
+                                            <th scope="col "><input type="checkbox"> </th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                            <td>Vendedor4</td>
+                                            <td>$1.030.000</td>
+
+                                            <th scope="col "><input type="checkbox"> </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+                <!-- <div class="table-containter-1 ms-5 m-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"> </th>
+                                <th scope="col">Nombre compañia</th>
+                                <th scope="col">Pago pendiente</th>
+                                <th scope="col "><input type="checkbox"> Selecionar Todo</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                <td>Compañia1</td>
+                                <td>$2.000.000</td>
+
+                                <th scope="col "><input type="checkbox"> </th>
+                            </tr>
+                            <tr>
+                                <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                <td>Compañia2</td>
+                                <td>$6.000.000</td>
+                                <th scope="col "><input type="checkbox"></th>
+                            </tr>
+                            <tr>
+                                <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                <td>Compañia3</td>
+                                <td>$10.000.000</td>
+
+                                <th scope="col "><input type="checkbox"> </th>
+                            </tr>
+                            <tr>
+                                <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                <td>Compañia4</td>
+                                <td>$2.000.000</td>
+
+                                <th scope="col "><input type="checkbox"> </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+                <div class="table  footer-pay">
+                    <table class="table tableColor">
+                        <thead>
+                            <tr>
+                                <th scope="col ">TOTAL A PAGAR</th>
+                                <th scope="col ">$20.000.000</th>
+                                <th scope="col ">
+                                    <!-- <button type="button" class="btn btn-danger  btn-pay">PAGAR</button> -->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-danger btn-pay" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Pagar
+</button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header1">
+                                                    <h5 class="modal-title" id="exampleModalLabel">¿Estás seguro de ejecutar el pago?</h5>
+                                                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                                                </div>
+                                                <div class="modal-body">
+                                                    Total a pagar: $20.000.000
+                                                </div>
+                                                <div class="modal-footer1">
+                                                    <button type="button" class="btn btn-secondary btnCancel" data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="button" class="btn btn-danger btn-pay btnPay">Pagar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div class="payment_info_box2 container ">
+
+                <h2 class="ms-5 h2Pay">
+                    Historia de pago</h2>
+
+                <div class="admin_info-date2" id="fecha">
+                    <div id="months" class="months">mes</div>
+                    <div id="dia" class="dia">dia</div>
+                    <div id="year" class="year">año</div>
+                </div>
+                <div class="table-container-2  table row ms-5">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col ">Nombre de compañia</th>
+                                <th scope="col ">Pagos pendientes</th>
+                                <th scope="col ">Fecha</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                    <td>Compañia4</td>
+                                    <td>$2.000.000</td>
+                                    <td>OCT-20-19</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                    <td>Compañia4</td>
+                                    <td>$2.000.000</td>
+                                    <td>OCT-20-19</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                    <td>Compañia4</td>
+                                    <td>$2.000.000</td>
+                                    <td>OCT-20-19</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><img src="./assets/images/company-img.png" alt=""></th>
+                                    <td>Compañia4</td>
+                                    <td>$2.000.000</td>
+                                    <td>OCT-20-19</td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-succes">Descargar Excel <i class="fas fa-download"></i></button>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js " integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU " crossorigin="anonymous "></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js " integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj " crossorigin="anonymous "></script>
+            <script src="./assets/js/fecha.js"></script>
+            <script src="https://kit.fontawesome.com/095056a418.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
