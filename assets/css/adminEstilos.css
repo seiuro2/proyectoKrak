@@ -9,6 +9,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: inherit;
+    height: 100vh;
     display: grid;
 }
 
@@ -83,14 +84,17 @@ body {
     outline: none;
 }
 
-input:active {
-    /* set time duration to your needs */
-    /* animation: gradient 100ms; */
+
+/* input:active {
+    set time duration to your needs */
+
+
+/* animation: gradient 100ms;
     animation: gradient 100ms;
     background: #ff3566;
     color: #fff;
     box-shadow: none;
-}
+} */
 
 
 /* efectos del navBar */
@@ -507,9 +511,212 @@ input:active {
     top: -25px;
     left: -87px;
     background-color: #ede2e1;
-    width: 99.9%;
+    width: 70%;
 }
 
 li:active {
     background-color: #6d1b37;
+}
+
+
+/* Estilos para companyCards */
+
+.container2 {
+    grid-row: 2/7;
+    grid-column: 2/8;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    box-sizing: border-box;
+}
+
+.cardsContainer {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+    overflow: auto;
+}
+
+.textCompany {
+    padding-top: 10px;
+    padding-left: 40px;
+    width: 100%;
+    background-color: #fff5f5;
+    height: 100px;
+}
+
+.dropDownF {
+    grid-row: 3/4;
+    grid-column: 2/8;
+}
+
+.cardsContainer {
+    width: 100%;
+    margin: auto;
+}
+
+.card {
+    border-radius: 10px !important;
+    width: 179px;
+    height: 239px;
+}
+
+.cardFormat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardFormat p {
+    margin-bottom: 0;
+    font-size: 8px;
+}
+
+.card-header1 {
+    border-radius: 15px;
+    height: 40px;
+    background-color: #ff3566;
+}
+
+.card-header2 {
+    height: 40px;
+    background-color: #1bc6ce;
+}
+
+.card-header3 {
+    height: 40px;
+    background-color: #09c199;
+}
+
+.card-header4 {
+    height: 40px;
+    background-color: #f8e71c;
+}
+
+.card-header5 {
+    height: 40px;
+    background-color: #b8e986;
+}
+
+.card-header6 {
+    height: 40px;
+    background-color: #bd10e0;
+}
+
+.filter {
+    display: flex;
+    /* margin: auto; */
+    width: 75%;
+}
+
+.carousel-indicators1 {
+    position: relative;
+    top: -80px;
+    left: 1000px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.carousel-indicators1 li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    display: flex;
+    width: 90px;
+    height: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-indent: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 0.5;
+    transition: opacity 0.6s ease;
+}
+
+
+/* Contact-us  */
+
+.contactContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff5f5;
+    grid-row: 2/8;
+    grid-column: 2/8;
+}
+
+.contactText {
+    text-align: center;
+    /* justify-content: center;
+    align-items: center; */
+    width: 300px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.contactText p {
+    font-family: 'Poppins', sans-serif;
+    color: #030335;
+    font-size: 10px;
+}
+
+.formContainerContact {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 349px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    background-color: white;
+}
+
+.contactCardForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+input,
+.mail,
+.naME {
+    border-radius: 20px;
+    font-family: FontAwesome, 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.textArea {
+    border-radius: 20px;
+    width: 236px;
+    padding-bottom: 10px;
+}
+
+.btnTextArea {
+    width: 260px;
+    height: 44px;
+    border-radius: 20px;
+    background-color: #ff3566 !important;
+    color: white;
+    outline: none !important;
+}
+
+
+/* contact us succes  */
+
+.successText {
+    margin: auto;
+    text-align: center;
 }
